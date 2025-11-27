@@ -11,10 +11,14 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="btn"
+      className="p-2 hover:bg-secondary/40 rounded-full text-accent cursor-pointer"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      {theme === "light" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+      {theme === "light" ? (
+        <MdOutlineDarkMode size={24} />
+      ) : (
+        <MdOutlineLightMode size={24} />
+      )}
     </button>
   );
 }
