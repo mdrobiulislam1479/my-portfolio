@@ -31,11 +31,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-300 border-b border-dashed border-secondary ${
+      className={`sticky w-full top-0 z-50 transition-all duration-300 border-b border-dashed border-secondary ${
         isScrolled ? "bg-primary shadow-md" : "bg-primary/80 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <h1

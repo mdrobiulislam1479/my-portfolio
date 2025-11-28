@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -8,6 +10,7 @@
   --color-primary: #ffffff;
   --color-secondary: #00adb5;
   --color-accent: #364153;
+  --cursor-color: #00adb5;
 }
 
 /* DARK THEME */
@@ -18,4 +21,9 @@
   --color-primary: #101828;
   --color-secondary: #00adb5;
   --color-accent: #ffffff;
+  --cursor-color: #00adb5;
+}
+
+* {
+  font-family: "Inter", sans-serif;
 }
