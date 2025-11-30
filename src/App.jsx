@@ -2,6 +2,7 @@ import AnimatedCursor from "react-animated-cursor";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       </div>
       <Home />
       <About />
+      <Skills />
     </>
   );
 }
