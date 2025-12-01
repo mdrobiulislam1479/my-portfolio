@@ -49,7 +49,7 @@ export default function Navbar() {
             <ThemeToggle />
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 cursor-pointer" />
+                <X className="w-6 h-6 cursor-pointer " />
               ) : (
                 <Menu className="w-6 h-6 cursor-pointer" />
               )}
@@ -59,7 +59,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden flex flex-col gap-2 items-center py-4 border-t border-secondary">
+          <div className="md:hidden flex flex-col gap-2 items-center py-4  absolute w-full bg-primary/95 z-10 left-0 border-y border-dashed border-secondary">
             {navLinks.map((link) => (
               <button
                 key={link.id}

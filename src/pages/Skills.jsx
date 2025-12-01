@@ -69,7 +69,7 @@ const Skills = () => {
   };
   return (
     <div className="max-w-7xl mx-auto pb-20" id="skills">
-      <h2 className="text-4xl font-bold my-20 text-center divider w-md mx-auto">
+      <h2 className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto">
         My <span className="text-secondary">Skills</span>
       </h2>
       <div className="flex justify-center gap-4 mb-8">

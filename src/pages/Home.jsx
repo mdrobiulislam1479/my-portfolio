@@ -1,7 +1,7 @@
 import myPic from "../assets/white-shirt.png";
 import { MdMailOutline } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
     >
       <div className="text-center lg:text-left mb-5 md:mb-0 max-w-2xl">
         <span className="text-accent text-4xl">Hello, I'm</span>
-        <h1 className="text-4xl md:text-6xl font-bold text-secondary mt-2">
+        <h1 className="text-4xl md:text-6xl font-bold text-accent mt-2">
           Md Robiul Islam
         </h1>
         <h2 className="text-3xl md:text-4xl text-accent my-8">
@@ -35,21 +35,31 @@ const Home = () => {
           {/* Social Icons */}
           <a
             href=""
-            className="border p-2 rounded-full hover:border-secondary hover:text-secondary hover:shadow-secondary/50 hover:shadow-lg transition hover:scale-105 hover:-translate-y-1 hover:duration-300"
+            target="_blank"
+            className="bg-base-100/80 p-2 rounded-lg border border-secondary/30 text-secondary hover:bg-secondary/10 transition hover:shadow-lg hover:shadow-secondary/30 hover:scale-105"
           >
-            <FaLinkedinIn size={24} />
+            <FaLinkedinIn size={22} />
           </a>
           <a
             href=""
-            className="border p-2 rounded-full hover:border-secondary hover:text-secondary hover:shadow-secondary/50 hover:shadow-lg transition hover:scale-105 hover:-translate-y-1 hover:duration-300"
+            target="_blank"
+            className="bg-base-100/80 p-2 rounded-lg border border-secondary/30 text-secondary hover:bg-secondary/10 transition hover:shadow-lg hover:shadow-secondary/30 hover:scale-105"
           >
-            <FiGithub size={24} />
+            <FiGithub size={22} />
           </a>
           <a
             href=""
-            className="border p-2 rounded-full hover:border-secondary hover:text-secondary hover:shadow-secondary/50 hover:shadow-lg transition hover:scale-105 hover:-translate-y-1 hover:duration-300"
+            target="_blank"
+            className="bg-base-100/80 p-2 rounded-lg border border-secondary/30 text-secondary hover:bg-secondary/10 transition hover:shadow-lg hover:shadow-secondary/30 hover:scale-105"
           >
-            <MdMailOutline size={24} />
+            <MdMailOutline size={22} />
+          </a>
+          <a
+            href=""
+            target="_blank"
+            className="bg-base-100/80 p-2 rounded-lg border border-secondary/30 text-secondary hover:bg-secondary/10 transition hover:shadow-lg hover:shadow-secondary/30 hover:scale-105"
+          >
+            <FaWhatsapp size={22} />
           </a>
         </div>
       </div>
