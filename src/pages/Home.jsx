@@ -28,7 +28,7 @@ const Home = () => {
         <a className="btn bg-secondary text-white mt-6 mr-4 border-secondary hover:bg-secondary/90 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:scale-105 hover:-translate-y-1 hover:duration-300">
           Contact Me
         </a>
-        <a className="btn bg-transparent border-secondary text-accent mt-6 hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:scale-105 hover:-translate-y-1 hover:duration-300">
+        <a className="btn bg-transparent border-secondary text-accent hover:text-secondary mt-6 hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:scale-105 hover:-translate-y-1 hover:duration-300">
           View Projects
         </a>
         <div className="flex gap-4  mt-8 justify-center lg:justify-start text-accent">

@@ -1,13 +1,11 @@
 import { FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { FiGithub, FiMail, FiPhone } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
-import { SiDiscord } from "react-icons/si";
-import { FaTwitter } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <div className="max-w-7xl mx-auto py-20 px-4 md:px-0" id="contact">
+    <div className="max-w-7xl mx-auto  md:py-20 px-4 md:px-0" id="contact">
       <h2 className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto">
         Contact <span className="text-secondary">Me</span>
       </h2>
