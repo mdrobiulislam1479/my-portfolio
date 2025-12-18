@@ -1,5 +1,6 @@
 import { BsBrowserEdge } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
     title: "ToyTopia",
     description:
       "ToyTopia is a vibrant and playful online marketplace designed for families to discover and support local toy sellers.",
-    tech: ["JavaScript", "React", "TailwindCSS", "AOS"],
+    tech: ["JavaScript", "React", "TailwindCSS", "AOS", "Firebase"],
     image: "https://i.ibb.co.com/600yTTsH/Annotation-2025-12-04-231903.jpg",
     github_link: "https://github.com/mdrobiulislam1479/toy-topia",
     live_link: "https://ph-toy-topia.netlify.app",
@@ -36,19 +37,48 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-4 ">
-      <h2 className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto">
+    <motion.section
+      id="projects"
+      className="max-w-7xl mx-auto px-4 pt-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.h2
+        className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         My <span className="text-secondary">Projects</span>
-      </h2>
+      </motion.h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <motion.div
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: { transition: { staggerChildren: 0.15 } },
+        }}
+      >
         {projects.map((project) => (
-          <div className="group bg-base-100 rounded-3xl overflow-hidden shadow-xl border border-secondary hover:shadow-lg hover:shadow-secondary transition-all duration-300 ">
+          <motion.div
+            key={project.id}
+            className="group bg-base-100 rounded-lg overflow-hidden shadow-xl border border-secondary hover:shadow-md hover:shadow-secondary transition-all duration-300"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              show: { opacity: 1, y: 0 },
+            }}
+          >
             <div className="overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
 
@@ -71,22 +101,24 @@ export default function ProjectsSection() {
                 ))}
               </div>
 
-              <a
-                href={project.live_link}
-                className="btn bg-transparent border-secondary text-accent hover:text-secondary mt-6 hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:scale-105 hover:-translate-y-1 hover:duration-300"
-              >
-                <BsBrowserEdge /> Live Demo
-              </a>
-              <a
-                href={project.github_link}
-                className="btn bg-transparent border-secondary text-accent hover:text-secondary mt-6 hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:scale-105 hover:-translate-y-1 hover:duration-300 ml-3"
-              >
-                <FaGithub /> Github Code
-              </a>
+              <div className="flex flex-wrap mt-6">
+                <a
+                  href={project.live_link}
+                  className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300 mr-3"
+                >
+                  <BsBrowserEdge /> Live Demo
+                </a>
+                <a
+                  href={project.github_link}
+                  className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300"
+                >
+                  <FaGithub /> Github Code
+                </a>
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

@@ -66,7 +66,7 @@ const Skills = () => {
     return [];
   };
   return (
-    <div className="max-w-7xl mx-auto pb-20" id="skills">
+    <div className="max-w-7xl mx-auto pt-10" id="skills">
       <h2 className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto">
         My <span className="text-secondary">Skills</span>
       </h2>

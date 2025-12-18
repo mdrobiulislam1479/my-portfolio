@@ -12,7 +12,7 @@ function App() {
     <>
       <Navbar />
       <div className="hidden md:flex">
-        <AnimatedCursor
+        {/* <AnimatedCursor
           innerSize={8}
           outerSize={28}
           innerScale={1}
@@ -25,7 +25,7 @@ function App() {
           outerStyle={{
             border: "2px solid var(--cursor-color)",
           }}
-        />
+        /> */}
       </div>
       <Home />
       <About />
