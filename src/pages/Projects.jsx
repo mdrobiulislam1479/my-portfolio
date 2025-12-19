@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
+    title: "Ticket Point",
+    description:
+      "TicketPoint is a modern Online Ticket Booking Platform built with the MERN Stack. It allows users to easily search, book, and pay for travel tickets.",
+    tech: ["JavaScript", "React", "TailwindCSS", "Firebase", "stripe"],
+    image: "https://i.ibb.co.com/TBph0ScF/Annotation-2025-12-19-000632.jpg",
+    live_link: "https://ticket-point.vercel.app",
+  },
+  {
+    id: 2,
     title: "Habit Tracker",
     description:
       "Habit Tracker is a modern habit tracking web application that helps users build positive routines, stay consistent, and monitor their progress.",
@@ -14,24 +23,14 @@ const projects = [
     live_link: "https://habit-tracker-zone.netlify.app",
   },
   {
-    id: 2,
-    title: "ToyTopia",
+    id: 3,
+    title: "Toy Topia",
     description:
       "ToyTopia is a vibrant and playful online marketplace designed for families to discover and support local toy sellers.",
     tech: ["JavaScript", "React", "TailwindCSS", "AOS", "Firebase"],
     image: "https://i.ibb.co.com/600yTTsH/Annotation-2025-12-04-231903.jpg",
     github_link: "https://github.com/mdrobiulislam1479/toy-topia",
     live_link: "https://ph-toy-topia.netlify.app",
-  },
-  {
-    id: 3,
-    title: "ArtZone",
-    description:
-      "ArtZone is a modern, interactive art showcase platform where users can explore artworks, upload creations, and manage their art portfolio.",
-    tech: ["Next.js", "React", "javaScript", "TailwindCSS"],
-    image: "https://i.ibb.co.com/v60qNWYq/Annotation-2025-12-04-232544.jpg",
-    github_link: "https://github.com/mdrobiulislam1479/art-zone-client",
-    live_link: "https://art-zone-client.vercel.app",
   },
 ];
 
@@ -103,17 +102,23 @@ export default function ProjectsSection() {
 
               <div className="flex flex-wrap mt-6">
                 <a
+                  target="_blank"
                   href={project.live_link}
                   className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300 mr-3"
                 >
                   <BsBrowserEdge /> Live Demo
                 </a>
-                <a
-                  href={project.github_link}
-                  className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300"
-                >
-                  <FaGithub /> Github Code
-                </a>
+                {!project.github_link ? (
+                  ""
+                ) : (
+                  <a
+                    target="_blank"
+                    href={project.github_link}
+                    className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300"
+                  >
+                    <FaGithub /> Github Code
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
