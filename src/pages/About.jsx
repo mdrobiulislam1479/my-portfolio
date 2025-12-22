@@ -4,14 +4,11 @@ const About = () => {
   return (
     <div
       id="about"
-      className="bg-linear-to-br from-base-100 via-secondary/10 to-accent/5 py-10 relative overflow-hidden"
+      className="bg-linear-to-br from-base-100 via-secondary/10 to-accent/5 py-10 overflow-hidden"
     >
-      {/* Decorative background pattern */}
-      <div className="absolute inset-0 pointer-events-none opacity-10 select-none bg-[url('https://www.transparenttextures.com/patterns/diamond-upholstery.png')]" />
-
-      <section className="max-w-7xl mx-auto px-4 md:px-0 py-20 text-accent flex flex-col lg:flex-row gap-10 items-center lg:items-stretch justify-center relative z-10">
+      <section className="max-w-7xl mx-auto px-4 lg:px-0 py-20 text-accent flex flex-col md:flex-row gap-10 items-center lg:items-stretch justify-center relative z-10">
         <motion.div
-          className="bg-base-100 rounded-xl shadow-xl p-8 border-2 border-secondary/20 backdrop-blur-lg flex flex-col justify-center w-full lg:w-[60%]"
+          className="bg-base-100 rounded-xl shadow-xl px-3 md:px-8 py-8 border-2 border-secondary/20 backdrop-blur-lg flex flex-col justify-center w-full md:w-[80%] lg:w-[60%]"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

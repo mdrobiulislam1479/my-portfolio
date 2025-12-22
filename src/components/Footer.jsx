@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full py-10 px-6 bg-base-100 text-accent">
+    <footer className="w-full py-10 px-6 bg-linear-to-br from-base-100 via-secondary/10 text-accent">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         {/* Logo + Text */}
         <div>

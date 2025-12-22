@@ -13,11 +13,11 @@ const Home = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="max-w-7xl mx-auto min-h-screen lg:flex justify-between items-center px-4 pt-20 pb-16 md:pb-0 md:pt-0 gap-8 xl:gap-20"
+      className="max-w-7xl mx-auto min-h-screen lg:flex justify-between items-center px-4 pb-16 lg:pb-0 pt-20 lg:pt-0 gap-8 xl:gap-20"
     >
       {/* LEFT SIDE CONTENT */}
       <motion.div
-        className="text-center lg:text-left mb-5 md:mb-0 max-w-2xl"
+        className="text-center lg:text-left mb-5 lg:mb-0 lg:max-w-2xl"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}

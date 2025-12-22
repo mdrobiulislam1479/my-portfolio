@@ -90,7 +90,7 @@ export default function Navbar() {
           shrink ? "shadow-md" : ""
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-0 h-full">
+        <div className="max-w-7xl mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
             <motion.a
