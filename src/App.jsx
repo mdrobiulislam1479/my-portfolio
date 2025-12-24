@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
 import LoadingSpinner from "./components/LoadingSpinner";
+import ReactLenis from "lenis/react";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,13 +26,27 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <ReactLenis
+        root
+        options={{
+          lerp: 0.1,
+          duration: 1.2,
+          orientation: "vertical",
+          gestureOrientation: "vertical",
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+        }}
+      >
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </ReactLenis>
     </>
   );
 }
