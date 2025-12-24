@@ -24,6 +24,7 @@ import { FiGithub } from "react-icons/fi";
 import { VscVscode } from "react-icons/vsc";
 import { FaPixiv } from "react-icons/fa6";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const frontend = [
   { name: "HTML5", icon: <FaHtml5 /> },
@@ -67,10 +68,22 @@ const Skills = () => {
   };
   return (
     <div className="max-w-7xl mx-auto pt-10 px-4" id="skills">
-      <h2 className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto">
+      <motion.h2
+        className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         My <span className="text-secondary">Skills</span>
-      </h2>
-      <div className="flex justify-center gap-4 mb-8">
+      </motion.h2>
+      <motion.div
+        className="flex justify-center gap-4 mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <button
           className={`btn px-6 py-2 rounded-full font-semibold border-2 transition-all duration-300 ${
             section === "frontend"
@@ -101,16 +114,20 @@ const Skills = () => {
         >
           Tools
         </button>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-4 md:px-0">
         {getSkills().map((skill) => (
-          <div
+          <motion.div
             key={skill.name}
             className="flex flex-col items-center justify-center gap-4 p-6 bg-secondary/10 rounded-lg shadow-lg hover:shadow-secondary/30 hover:scale-105 hover:-translate-y-1 transition hover:duration-300 border-t-4 border-secondary"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
             <div className="text-6xl text-secondary">{skill.icon}</div>
             <h3 className="text-xl font-semibold text-accent">{skill.name}</h3>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
