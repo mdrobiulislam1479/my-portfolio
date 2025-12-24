@@ -5,6 +5,7 @@ import { MdMailOutline } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const formRef = useRef();
@@ -42,16 +43,26 @@ const Contact = () => {
 
   return (
     <div className="max-w-7xl mx-auto py-10 px-4 lg::px-0" id="contact">
-      <h2 className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto">
+      <motion.h2
+        className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         Contact <span className="text-secondary">Me</span>
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Send Message Form */}
-        <form
+        <motion.form
           ref={formRef}
           onSubmit={sendEmail}
           className="bg-primary/80 rounded-xl p-8 shadow-lg border border-secondary/30 flex flex-col gap-6"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
           <h3 className="text-2xl font-bold text-secondary mb-2">
             Send Message
@@ -109,10 +120,16 @@ const Contact = () => {
           >
             Send Message
           </button>
-        </form>
+        </motion.form>
 
         {/* Contact Info */}
-        <div className="flex flex-col gap-8 justify-between">
+        <motion.div
+          className="flex flex-col gap-8 justify-between"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <div>
             <h3 className="text-2xl font-bold text-secondary mb-2">
               Let's Connect
@@ -187,7 +204,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
