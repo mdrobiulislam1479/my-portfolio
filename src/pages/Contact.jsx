@@ -41,8 +41,21 @@ const Contact = () => {
       );
   };
 
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
-    <div className="max-w-7xl mx-auto py-10 px-4 lg::px-0" id="contact">
+    <div
+      className="max-w-7xl mx-auto py-10 px-4 lg::px-0 overflow-x-hidden"
+      id="contact"
+    >
       <motion.h2
         className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto"
         initial={{ opacity: 0, y: 20 }}
@@ -59,8 +72,9 @@ const Contact = () => {
           ref={formRef}
           onSubmit={sendEmail}
           className="bg-primary/80 rounded-xl p-8 shadow-lg border border-secondary/30 flex flex-col gap-6"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={fadeLeft}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
@@ -125,8 +139,9 @@ const Contact = () => {
         {/* Contact Info */}
         <motion.div
           className="flex flex-col gap-8 justify-between"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={fadeRight}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
