@@ -9,7 +9,8 @@ const projects = [
     description:
       "TicketPoint is a modern Online Ticket Booking Platform built with the MERN Stack. It allows users to easily search, book, and pay for travel tickets.",
     tech: ["JavaScript", "React", "TailwindCSS", "Firebase", "stripe"],
-    image: "https://i.ibb.co.com/TBph0ScF/Annotation-2025-12-19-000632.jpg",
+    image: "https://i.ibb.co.com/7NWV1xf7/Annotation-2026-01-06-220538.jpg",
+    github_link: "https://github.com/mdrobiulislam1479/ticket-point-client",
     live_link: "https://ticket-point.vercel.app",
   },
   {
@@ -18,7 +19,7 @@ const projects = [
     description:
       "Habit Tracker is a modern habit tracking web application that helps users build positive routines, stay consistent, and monitor their progress.",
     tech: ["JavaScript", "React", "TailwindCSS", "Firebase"],
-    image: "https://i.ibb.co.com/Cj5Hqp5/Annotation-2025-12-04-231411.jpg",
+    image: "https://i.ibb.co.com/670pkqgS/Annotation-2026-01-06-220103.jpg",
     github_link: "https://github.com/mdrobiulislam1479/habit-tracker-client",
     live_link: "https://habit-tracker-zone.netlify.app",
   },
@@ -28,7 +29,7 @@ const projects = [
     description:
       "ToyTopia is a vibrant and playful online marketplace designed for families to discover and support local toy sellers.",
     tech: ["JavaScript", "React", "TailwindCSS", "AOS", "Firebase"],
-    image: "https://i.ibb.co.com/600yTTsH/Annotation-2025-12-04-231903.jpg",
+    image: "https://i.ibb.co.com/jPPj0Rkr/Annotation-2026-01-06-220300.jpg",
     github_link: "https://github.com/mdrobiulislam1479/toy-topia",
     live_link: "https://ph-toy-topia.netlify.app",
   },
