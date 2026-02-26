@@ -54,6 +54,16 @@ const projects = [
     github_link: "https://github.com/mdrobiulislam1479/toy-topia",
     live_link: "https://ph-toy-topia.netlify.app",
   },
+  {
+    id: 6,
+    title: "Hero Apps",
+    description:
+      "Hero Apps ensures users can manage their software ecosystem with confidence and full control.",
+    tech: ["JavaScript", "React", "TailwindCSS", "DaisyUI", "React-router"],
+    image: "https://i.ibb.co/7xQDB5fM/Annotation-2026-02-26-123834.jpg",
+    github_link: "https://github.com/mdrobiulislam1479/hero-apps",
+    live_link: "https://ph-hero-apps.netlify.app",
+  },
 ];
 
 export default function ProjectsSection() {
