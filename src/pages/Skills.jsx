@@ -18,22 +18,25 @@ import {
   SiNextdotjs,
   SiPostman,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { VscVscode } from "react-icons/vsc";
 import { FaPixiv } from "react-icons/fa6";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 const frontend = [
+  { name: "React", icon: <FaReact /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "JavaScript", icon: <BiLogoJavascript /> },
+  { name: "Typescript", icon: <SiTypescript /> },
+  { name: "Redux", icon: <TbBrandRedux /> },
   { name: "HTML5", icon: <FaHtml5 /> },
   { name: "CSS3", icon: <IoLogoCss3 /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "Bootstrap", icon: <FaBootstrap /> },
-  { name: "JavaScript", icon: <BiLogoJavascript /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "Next.js", icon: <SiNextdotjs /> },
   { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
 ];
 
