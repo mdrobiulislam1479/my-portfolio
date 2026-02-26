@@ -25,6 +25,27 @@ const projects = [
   },
   {
     id: 3,
+    title: "Eco Bazar",
+    description:
+      "Eco Bazar provides a complete shopping experience with user authentication, product browsing, cart management and secure checkout.",
+    tech: ["JavaScript", "Next.js", "TailwindCSS", "Next Auth", "Redux"],
+    image: "https://i.ibb.co/RGWYX4xH/Annotation-2026-02-26-121042.jpg",
+    github_link: "https://github.com/mdrobiulislam1479/eco-bazar",
+    live_link: "https://eco-bazar-one.vercel.app",
+  },
+  {
+    id: 4,
+    title: "Eco Sapling",
+    description:
+      "Eco Sapling is a clean, modern plant shop experience built with Next.js. It highlights smooth browsing flow, collections, and plant detail views.",
+    tech: ["JavaScript", "Next.js", "TailwindCSS", "React-toastify"],
+    image: "https://i.ibb.co/p6PrCdhx/Annotation-2026-02-26-122316.jpg",
+    github_link: "https://github.com/mdrobiulislam1479/eco-sapling",
+    live_link: "https://eco-sapling.vercel.app",
+  },
+
+  {
+    id: 5,
     title: "Toy Topia",
     description:
       "ToyTopia is a vibrant and playful online marketplace designed for families to discover and support local toy sellers.",
