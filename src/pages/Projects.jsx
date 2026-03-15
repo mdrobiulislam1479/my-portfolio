@@ -71,84 +71,102 @@ export default function ProjectsSection() {
     <motion.section
       id="projects"
       className="max-w-7xl mx-auto px-4 pt-10"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
     >
       <motion.h2
         className="text-4xl font-bold my-20 text-center text-accent divider max-w-md mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         My <span className="text-secondary">Projects</span>
       </motion.h2>
 
       <motion.div
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         variants={{
-          hidden: {},
-          show: { transition: { staggerChildren: 0.15 } },
+          hidden: { opacity: 0 },
+          show: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
         }}
       >
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className="group bg-base-100 rounded-lg overflow-hidden shadow-xl border border-secondary hover:shadow-md hover:shadow-secondary transition-all duration-300"
+            className="group bg-base-100 rounded-xl overflow-hidden shadow-lg border border-secondary/20 transition-colors duration-500"
             variants={{
-              hidden: { opacity: 0, y: 30 },
-              show: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 50, scale: 0.95 },
+              show: {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                transition: { type: "spring", stiffness: 100, damping: 15 },
+              },
+            }}
+            whileHover={{
+              y: -10,
+              transition: { duration: 0.3 },
             }}
           >
-            <div className="overflow-hidden">
-              <img
+            {/* Image Container with Overlay Effect */}
+            <div className="relative overflow-hidden aspect-video">
+              <motion.img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.6 }}
               />
+              <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors duration-300" />
             </div>
 
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3 text-accent group-hover:text-secondary transition-colors duration-300">
                 {project.title}
               </h3>
-              <p className="text-accent/70 text-sm leading-relaxed mb-5">
+
+              <p className="text-accent/70 text-sm leading-relaxed mb-5 h-20 line-clamp-3">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium border border-secondary/30"
+                    className="bg-secondary/5 text-secondary px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider border border-secondary/20"
                   >
                     {t}
                   </span>
                 ))}
               </div>
 
-              <div className="flex flex-wrap mt-6">
+              <div className="flex items-center justify-between mt-auto">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={project.live_link}
-                  className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300 mr-3"
+                  className="flex items-center gap-2 text-sm font-bold text-accent hover:text-secondary transition-colors"
                 >
-                  <BsBrowserEdge /> Live Demo
+                  <BsBrowserEdge size={18} /> LIVE PREVIEW
                 </a>
-                {!project.github_link ? (
-                  ""
-                ) : (
+
+                {project.github_link && (
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href={project.github_link}
-                    className="btn bg-transparent border-secondary text-accent hover:text-secondary hover:bg-secondary/10 hover:border-secondary/90 hover:shadow-lg hover:shadow-secondary/50 transition hover:duration-300"
+                    className="p-2 rounded-full bg-secondary/10 text-secondary hover:bg-secondary hover:text-white transition-all"
                   >
-                    <FaGithub /> Github Code
+                    <FaGithub size={20} />
                   </a>
                 )}
               </div>

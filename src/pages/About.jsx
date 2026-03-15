@@ -4,7 +4,7 @@ import { FiMail, FiPhone, FiMapPin, FiUser } from "react-icons/fi";
 const About = () => {
   return (
     <div id="about" className="relative bg-base-100 py-20 overflow-hidden">
-      <section className="max-w-7xl mx-auto px-6 relative z-10">
+      <section className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left Side: Image with Decorative Frame */}
           <motion.div
