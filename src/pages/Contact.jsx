@@ -18,7 +18,7 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -30,14 +30,14 @@ const Contact = () => {
           });
           formRef.current.reset();
         },
-        (error) => {
+        () => {
           Swal.fire({
             title: "Oops...",
-            text: "Something went wrong! " + error,
+            text: "Something went wrong! ",
             icon: "error",
             confirmButtonColor: "#FF5722",
           });
-        }
+        },
       );
   };
 
